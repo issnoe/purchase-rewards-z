@@ -9,6 +9,7 @@ test("pointsRewardCompute", () => {
   expect(Reward.getPointsRewardCompute(101)).toBe(52);
   expect(Reward.getPointsRewardCompute(70)).toBe(20);
   expect(Reward.getPointsRewardCompute(51)).toBe(1);
+  expect(Reward.getPointsRewardCompute(0)).toBe(0);
 });
 
 test("Summary list of purchases in base points reward", () => {

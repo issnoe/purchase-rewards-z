@@ -10,6 +10,9 @@ class Reward {
    * @returns number
    */
   getPointsRewardCompute = (purchase) => {
+    if (purchase == null) {
+      throw new Error("purchase null");
+    }
     let fx2 = 0;
     let fx1 = 0;
     if (purchase >= AMOUNT_UP_FX2) {
@@ -19,7 +22,7 @@ class Reward {
     if (purchase >= AMOUNT_UP_FX1 && purchase < AMOUNT_UP_FX2) {
       fx1 = purchase - AMOUNT_UP_FX1;
     }
-    console.log(POINTS_FX2 * fx2 + POINTS_FX1 * fx1);
+
     return POINTS_FX2 * fx2 + POINTS_FX1 * fx1;
   };
   /**
@@ -28,12 +31,13 @@ class Reward {
    * @returns number
    */
   summaryPoints = (list) => {
+    if (!list) {
+      throw new Error("list null");
+    }
     let acc = 0;
     list.map((item) => {
       acc = acc + this.getPointsRewardCompute(item.amount);
     });
-    console.log(list);
-    console.log(acc);
     return acc;
   };
 }

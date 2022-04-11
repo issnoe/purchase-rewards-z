@@ -33,7 +33,7 @@ test("groupByKey -> Empty exeption", () => {
 test("groupByKey -> Group by month 'feb' ", () => {
   const objectBykey = groupByKey("month", mock);
   const objectBykeySegement = objectBykey["feb"];
-  console.dir([objectBykey, objectBykeySegement]);
+  /* console.dir([objectBykey, objectBykeySegement]); */
   expect(objectBykeySegement).toEqual(
     expect.arrayContaining([
       expect.objectContaining({
@@ -49,7 +49,8 @@ test("groupByKey -> Group by month 'feb' ", () => {
 test("groupByKey -> Group by userId '1' ", () => {
   const objectBykey = groupByKey("userId", mock);
   const objectBykeySegement = objectBykey["2"];
-  console.dir([objectBykey, objectBykeySegement], {});
+  /*   console.dir([objectBykey, objectBykeySegement], {});
+   */
   expect(objectBykeySegement).toEqual(
     expect.arrayContaining([
       expect.objectContaining({ id: 2, userId: 2, amount: 50, month: "oct" }),
@@ -66,6 +67,6 @@ test("handleIterObject -> Mutation on iteration", () => {
   const result = handleIterObject({ 1: { a: "1" }, 2: { a: "2" } }, (item) => {
     return `x${item.a}`;
   });
-  console.log(result);
+  /* console.log(result); */
   expect(result).toEqual({ 1: "x1", 2: "x2" });
 });
