@@ -8,13 +8,13 @@ nodejs => v16.14.2
 cd api
 npm install
 npm run start
->open browser on localhost:3000
 ```
 
 ```bash
 cd client
 npm install
 npm run start
+>open browser on localhost:3000
 ```
 
 ## Run test
