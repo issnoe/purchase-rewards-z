@@ -2,14 +2,16 @@
   "name": "purchase-rewards",
   "version": "1.0.0",
   "description": "Calculate reward in base amount purchases",
-  "main": "index.js",
+  "main": "serve.js",
   "scripts": {
+    "start": "node serve.js",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.3",
     "jest": "^27.5.1"
   }
 }

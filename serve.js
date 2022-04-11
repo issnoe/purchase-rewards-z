@@ -1,18 +1,13 @@
-const RewardRecords = require("./database.json");
-const { groupByKey, handleIterObject } = require("./utils");
-const { Reward } = require("./RewardClass");
+const express = require("express");
+const { getAllSummary } = require("./Summary");
 
-const getAllSummary = () => {
-  const summary = handleIterObject(
-    groupByKey("userId", RewardRecords),
-    (item) => {
-      return handleIterObject(groupByKey("month", item), Reward.summaryPoints);
-    }
-  );
+const port = 3000;
+const app = express();
 
-  console.log("final summary", summary);
-};
+app.get("/", (req, res) => {
+  res.send(getAllSummary());
+});
 
-module.exports = {
-  getAllSummary,
-};
+app.listen(port, () => {
+  console.log("Server listening on the port   ", port);
+});
