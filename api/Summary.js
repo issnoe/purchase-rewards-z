@@ -12,6 +12,9 @@ const getAllSummary = () => {
   console.log("final summary", summary);
   return summary;
 };
+
+const getRewarsRecords = () => RewardRecords;
 module.exports = {
   getAllSummary,
+  getRewarsRecords,
 };
