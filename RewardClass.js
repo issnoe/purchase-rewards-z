@@ -22,6 +22,20 @@ class Reward {
     console.log(POINTS_FX2 * fx2 + POINTS_FX1 * fx1);
     return POINTS_FX2 * fx2 + POINTS_FX1 * fx1;
   };
+  /**
+   *
+   * @param {*} list
+   * @returns number
+   */
+  summaryPoints = (list) => {
+    let acc = 0;
+    list.map((item) => {
+      acc = acc + this.getPointsRewardCompute(item.amount);
+    });
+    console.log(list);
+    console.log(acc);
+    return acc;
+  };
 }
 
 module.exports = {
