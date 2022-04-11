@@ -10,7 +10,7 @@ const groupByKey = (index, array) => {
   }, {});
 };
 
-const handelIterObject = (object, call) => {
+const handleIterObject = (object, call) => {
   if (!object) {
     throw new Error("Empty Object");
   }
@@ -30,5 +30,5 @@ const handelIterObject = (object, call) => {
 
 module.exports = {
   groupByKey,
-  handelIterObject,
+  handleIterObject,
 };
