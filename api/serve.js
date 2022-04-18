@@ -1,7 +1,7 @@
 const express = require("express");
-const { getAllSummary, getRewarsRecords } = require("./Summary");
+const { getAllSummary, getRewarsRecords } = require("./summary");
 
-const port = 3001;
+const port = process.env.PORT;
 const app = express();
 
 app.get("/summary", (req, res) => {

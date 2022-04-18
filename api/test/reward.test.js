@@ -1,4 +1,4 @@
-const { Reward } = require("../RewardClass");
+const { Reward } = require("../reward");
 const { handleIterObject } = require("../utils");
 
 test("pointsRewardCompute", () => {

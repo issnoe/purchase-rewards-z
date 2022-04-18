@@ -1,6 +1,6 @@
 const RewardRecords = require("./database.json");
 const { groupByKey, handleIterObject } = require("./utils");
-const { Reward } = require("./RewardClass");
+const { Reward } = require("./reward");
 
 const getAllSummary = () => {
   const summary = handleIterObject(
